@@ -1,0 +1,310 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Regular.eot');
+    src: url('fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/TTLakes-Regular.woff') format('woff'),
+         url('fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Medium.eot');
+    src: url('fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+         url('fonts/TTLakes-Medium.woff') format('woff'),
+         url('fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Bold.eot');
+    src: url('fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/TTLakes-Bold.woff') format('woff'),
+         url('fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "TT Lakes", sans-serif;
+}
+
+.sidebar {
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 100vh;
+    background: #fff;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar__header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: space-between;
+    margin-bottom: 46px;
+    padding: 24px;
+}
+
+.sidebar__burger {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar__search {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar__burger:hover,
+.sidebar__search:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.sidebar__logo {
+    height: 51px;
+    width: 97px;
+    margin-right: auto;
+}
+
+.sidebar__search-form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sidebar__search-input {
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 14px;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 0;
+    opacity: 0;
+    background: #F8F8F8;
+}
+
+.sidebar__search-form:focus-within .sidebar__search-input {
+    width: 80px;
+    padding: 6px 10px;
+    opacity: 1;
+    border-color: #EAEAEA;
+}
+
+.sidebar__search-input:focus {
+    border-color: #41F6D7;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 2px rgba(65, 246, 215, 0.2);
+}
+
+.sidebar__search-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar__search-btn:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.sidebar__search-form:focus-within .sidebar__search-btn {
+    opacity: 0;
+    pointer-events: 0;
+    transform: scale(0.8);
+    width: 0;
+    height: 0;
+}
+
+.sidebar-nav__list {
+    list-style: none;
+}
+
+.sidebar-nav__item {
+    position: relative;
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-bottom: 8px;
+    padding: 12px 24px;
+}
+
+.sidebar-nav__link {
+    display: block;
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1B1C21;
+    letter-spacing: -0.2px;
+    background: transparent;
+    border: none;
+    border-radius: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    transform-origin: center;
+}
+
+.sidebar-nav__link:hover {
+    transform: scale(1.05);
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 2px #41F6D7;
+    padding: 6px;
+    margin: -6px;
+}
+
+.sidebar-nav__link--active {
+    box-shadow: none;
+    pointer-events: none;
+    opacity: 0.5;
+    color: #1B1C21;
+    background-color: #FFFFFF;
+    transform: none !important;
+}
+
+.sidebar-nav__link--active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 32px;
+    width: 4px;
+    background-color: #41F6D7;
+    border-radius: 0 4px 4px 0;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.sidebar__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 32px;
+    margin-left: 24px;
+}
+
+.sidebar__actions {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.sidebar__action {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.sidebar__action:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.sidebar__email {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: opacity 0.2 ease, transform 0.2 ease;
+}
+
+.sidebar__email:hover {
+    opacity: 0.7;
+}
+
+.sidebar__phone {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: opacity 0.2 ease, transform 0.2 ease;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.sidebar__phone:hover {
+    opacity: 0.7;
+}
+
+.sidebar__lang {
+    display: flex;
+    gap: 8px;
+}
+
+.sidebar__lang-link {
+    cursor: pointer;
+    transition: opacity 0.2 ease, transform 0.2 ease;
+    color: #333;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.sidebar__lang-link:hover {
+    opacity: 0.7;
+    transform: opacity 0.2 ease, transform 0.2 ease;
+}
+
+.sidebar__lang-link.active {
+    pointer-events: none;
+    color: #999;
+}
