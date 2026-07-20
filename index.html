@@ -10,66 +10,73 @@
     <aside class="sidebar">
         <div class="sidebar__top">
             <header class="sidebar__header">
-                <button class="sidebar__burger">
-                    <img src="img/burger.svg" alt="Меню" class="sidebar__icon">
+                <button class="sidebar__burger" aria-label="Меню">
+                    <img src="img/burger.svg" alt="">
                 </button>
                 <img src="img/group.png" alt="CPS" class="sidebar__logo">
-                <form class="sidebar__search-form">
-                    <input  type="text" class="sidebar__search-input" placeholder="Поиск..." aria-label="Поиск">
-                    <button type="button" class="sidebar__search-btn">
-                        <img src="img/search.svg" alt="Поиск" class="sidebar__icon">
-                    </button>
-                </form>
+                <button class="sidebar__search-btn" aria-label="Поиск">
+                    <img src="img/search.svg" alt="">
+                </button>
             </header>
-            <nav class="sidebar-nav">
-                <ul class="sidebar-nav__list">
-                    <li class="sidebar-nav__item">
-                        <a href="#" class="sidebar-nav__link sidebar-nav__link--active">Ремонт техники</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link nav__link--active">Ремонт техники</a>
                     </li>
-                    <li class="sidebar-nav__item">
-                        <a href="#" class="sidebar-nav__link">Услуги и сервисы</a>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Услуги и сервисы</a>
                     </li>
-                    <li class="sidebar-nav__item">
-                        <a href="#" class="sidebar-nav__link">Корпоративным клиентам</a>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Корпоративным клиентам</a>
                     </li>
-                    <li class="sidebar-nav__item">
-                        <a href="#" class="sidebar-nav__link">Продавцам техники</a>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Продавцам техники</a>
                     </li>
-                    <li class="sidebar-nav__item">
-                        <a href="#" class="sidebar-nav__link">Партнерам</a>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Партнерам</a>
                     </li>
-                    <li class="sidebar-nav__item">
-                        <a href="#" class="sidebar-nav__link">Производителям</a>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Производителям</a>
                     </li>
-                    <li class="sidebar-nav__item">
-                        <a href="#" class="sidebar-nav__link">Наши сервисные центры</a>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Наши сервисные центры</a>
                     </li>
-                    <li class="sidebar-nav__item">
-                        <a href="#" class="sidebar-nav__link">Контакты</a>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Контакты</a>
                     </li>
                 </ul>
             </nav>
         </div>
-        <div class="sidebar__contacts">
+        <footer class="sidebar__footer">
             <div class="sidebar__actions">
-                <button class="sidebar__action">
-                    <img src="img/call.svg" alt="Позвонить" class="sidebar__icon">
+                <button class="sidebar__action" aria-label="Позвонить">
+                    <img src="img/call.svg" alt="">
                 </button>
-                <button class="sidebar__action">
-                    <img src="img/chat.svg" alt="Написать" class="sidebar__icon">
+                <button class="sidebar__action" aria-label="Написать">
+                    <img src="img/chat.svg" alt="">
                 </button>
-                <button class="sidebar__action">
-                    <img src="img/profile.svg" alt="Профиль" class="sidebar__icon">
+                <button class="sidebar__action" aria-label="Профиль">
+                    <img src="img/profile.svg" alt="">
                 </button>
             </div>
-            <a href="mailto:mail@cps.com" class="sidebar__email">mail@cps.com</a>
-            <a href="tel:88008908900" class="sidebar__phone">8 800 890 8900</a>
-            <div class="sidebar__lang">
-                <a href="#" class="sidebar__lang-link active">RU</a>
-                <a href="#" class="sidebar__lang-link">EN</a>
-                <a href="#" class="sidebar__lang-link">CH</a>
-            </div>
-        </div>
+            
+            <address class="sidebar__contacts">
+                <a href="mailto:mail@cps.com" class="sidebar__email">mail@cps.com</a>
+                <a href="tel:88008908900" class="sidebar__phone">8 800 890 8900</a>
+            </address>
+            
+            <ul class="lang-switcher">
+                <li class="lang-switcher__item">
+                    <a href="#" class="lang-switcher__link lang-switcher__link--active">RU</a>
+                </li>
+                <li class="lang-switcher__item">
+                    <a href="#" class="lang-switcher__link">EN</a>
+                </li>
+                <li class="lang-switcher__item">
+                    <a href="#" class="lang-switcher__link">CH</a>
+                </li>
+            </ul>
+        </footer>
     </aside>
 </body>
 </html>
